@@ -43,6 +43,15 @@ Then I drew the circuit diagram for my circuit. After solving the problem of the
 This time the task is welding.
 I'm not a very ambidextrous person, so it took me about two hours to solder all my wires to the board after everyone in the lab had left in the evening. This is much, much faster than I imagined, and the job is much easier than I imagined.
 I often can't get the tin on top of my wire though, so it takes a lot of trying.
-After I finished soldering, I found that my wires were very messy. But the classmates around me can be organized. I plugged it up with a sure-to-fail mentality, and it worked! This makes me so happy! It's just that some wires are not very securely connected, so sometimes the button can work normally and sometimes it can't, so I found a loose Dupont wire and reinforced it.
+After I finished soldering, I found that my wires were very messy. But the classmates around me can be organized. I plugged it up with a sure-to-fail mentality, and it worked! This makes me so happy! It's just that some wires are not very securely connected, so sometimes the button can work normally and sometimes it can't, so I found a loose Dupont wire and reinforced it. And in the end I taped up the wires of each part
 I have to say that soldering is really a fun job! It brings me 10,000 percent focus, and I'm really blissful when I put on my headphones and solder my homework. Also, the goggles are really cool, I think I might go and buy one.
-Then I started to make the shell. I was going to laser cut it, but in order to keep the handmade texture, I cut out my express box to make the shell. This is another challenge.
+Then I found out that my homework can only work when it is connected to the computer, but I obviously use an external power supply! Only then did I realize that the 5v of my arduino was not connected to the power supply, so I soldered another wire between the 5v and the positive pole of the board. After solving all the problems, it is time to start thinking about the shell.
+At this time, I started to make the shell. I planned to laser cut it, but in order to preserve the handmade texture, I cut out my express box to make the shell. This is another challenge.
+After an afternoon, my shell was cut out. I assembled the cardboard, put the arduino in, and great, they still work!
+There was a feedback this week, I only brought my circuit to class, I didn’t prepare anything, I could only talk nonsense, but fortunately, the teacher and classmates could understand what I was talking about, fortunately.
+
+## week 04
+
+I need to color my homework and I'm going to glue the box to the arduino. Unfortunately I chose gouache paint instead of cardboard. The relationship between gouache paint and cardboard seems to be not very good, and I bought very few colors. The first time I painted it was really ugly, it was dark green. I also pasted purple cardboard on my hand, the effect is really not good Great, so I switched to a lighter color for a much better look.
+Finally my homework is done! But I still have a lot of post-work to do, it's been a really busy week.
+
