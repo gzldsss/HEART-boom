@@ -1,0 +1,117 @@
+int buttonPin=2;
+int buttonState=0;
+
+const int TrigPin = 11;
+const int EchoPin = 10;
+float cm;
+
+#include <Servo.h>
+Servo myservo1;  
+Servo myservo2;
+int pos = 0;
+
+#include "FastLED.h"           
+
+#define NUM_LEDS 60             
+#define LED_DT 9                
+#define LED_TYPE WS2812        
+#define COLOR_ORDER GRB         
+
+uint8_t max_bright = 30;       
+
+CRGB leds[NUM_LEDS];    
+
+void setup() { 
+  Serial.begin(9600);           
+  delay(100);                  
+
+  pinMode(buttonPin,INPUT);
+  pinMode(LED_DT,OUTPUT);
+  
+  LEDS.addLeds<LED_TYPE, LED_DT, COLOR_ORDER>(leds, NUM_LEDS);  
+  
+  FastLED.setBrightness(max_bright);                           
+
+  Serial.begin(9600);
+  myservo1.attach(4);
+  myservo2.attach(5);
+  
+  pinMode(TrigPin, OUTPUT);
+  pinMode(EchoPin, INPUT);
+}
+
+void loop () {  
+
+  buttonState=digitalRead(buttonPin);
+
+if(buttonState!=HIGH){
+
+// fill_solid section 全部点亮/熄灭
+ fill_solid(leds, 60, CRGB::Gold); 
+ FastLED.show();   
+ delay(500);
+
+ fill_solid(leds, 60, CRGB::Blue);   
+ FastLED.show(); 
+ delay(500);
+ 
+ fill_solid(leds, 60, CRGB::OrangeRed);   
+ FastLED.show(); 
+ delay(500);
+ 
+ fill_solid(leds, 60, CRGB::YellowGreen);   
+ FastLED.show(); 
+ delay(500);
+
+ fill_solid(leds, 60, CRGB::SeaGreen);   
+ FastLED.show(); 
+ delay(500);
+
+ 
+               
+} else {
+ 
+ fill_solid(leds, 60, CRGB::Black);   
+ FastLED.show(); 
+ //delay(50);
+}
+digitalWrite(TrigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(TrigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(TrigPin, LOW);
+  cm = pulseIn(EchoPin, HIGH) / 58; 
+  cm = (int(cm * 100)) / 100; 
+
+
+
+  if (cm < 10) {
+
+    if (pos < 90) {
+      for (pos = 0; pos < 90; pos += 1) 
+      { 
+        myservo1.write(pos); 
+        myservo2.write(pos);
+        delay(15);                       
+      }
+    } else if (pos == 90) {
+      pos = 90;
+    }
+
+    delay(100);
+  }
+  else {
+
+    if (pos > 0) {
+      for (pos = 90; pos > 0; pos -= 1) 
+      { 
+        myservo1.write(pos);        
+        myservo2.write(pos);
+        delay(15);                      
+      }
+    } else if (pos == 0) {
+      pos = 0;
+    }
+    delay(1000);
+  }
+}
