@@ -1,4 +1,4 @@
-# HEART-Boom
+# HEARTboom
 ## Background
 
 In this world, there will always have 20-year-old people and their idols.
